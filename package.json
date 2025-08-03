@@ -69,7 +69,6 @@
         "cover-view": "npm run rollup-test && nyc --clean --reporter=html node dist/test.js && open coverage/index.html",
         "benchmark-node": "npm run rollup-benchmark-node && node dist/benchmark.node.js",
         "benchmark-browser": "npm run rollup-benchmark-browser && budo dist/benchmark.browser.js --open --title 'h3-js benchmarks'",
-        "prepublishOnly": "npm run dist",
         "prettier": "prettier --write --config .prettierrc 'lib/**/*.js' 'build/**/*.js' 'test/**/*.js'"
     },
     "dependencies": {
