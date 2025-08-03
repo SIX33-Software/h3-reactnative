@@ -1,7 +1,7 @@
 /**
  * @module h3
  */
-declare module "h3-js" {
+declare module '@six33/h3-reactnative' {
     /**
      * 64-bit hexidecimal string representation of an H3 index
      * @static
@@ -155,7 +155,11 @@ declare module "h3-js" {
      *                                  pairs instead of [lat, lng]
      * @return {H3Index[]}              H3 indexes for all hexagons in polygon
      */
-    function polyfill(coordinates: number[][] | number[][][], res: number, isGeoJson?: boolean): H3Index[];
+    function polyfill(
+        coordinates: number[][] | number[][][],
+        res: number,
+        isGeoJson?: boolean
+    ): H3Index[];
     /**
      * Get the outlines of a set of H3 hexagons, returned in GeoJSON MultiPolygon
      * format (an array of polygons, each with an array of loops, each an array of
@@ -246,7 +250,10 @@ declare module "h3-js" {
      * @param {boolean} [formatAsGeoJson] Whether to provide GeoJSON output: [lng, lat]
      * @return {number[][]}               Array of geo coordinate pairs
      */
-    function getH3UnidirectionalEdgeBoundary(edgeIndex: H3Index, formatAsGeoJson?: boolean): number[][];
+    function getH3UnidirectionalEdgeBoundary(
+        edgeIndex: H3Index,
+        formatAsGeoJson?: boolean
+    ): number[][];
     /**
      * Get the grid distance between two hex indexes. This function may fail
      * to find the distance between two indexes if they are very far apart or
@@ -374,5 +381,3 @@ declare module "h3-js" {
      */
     function radsToDegs(rad: number): number;
 }
-
-
